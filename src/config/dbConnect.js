@@ -1,9 +1,7 @@
 import mongoose from "mongoose";
 
-const DATABASE = "";
-
 async function connectDB() {
-  mongoose.connect(DATABASE);
+  mongoose.connect(process.env.DATABASE_URL);
 
   return mongoose.connection;
 }
